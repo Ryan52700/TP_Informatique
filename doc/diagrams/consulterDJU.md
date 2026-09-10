@@ -10,8 +10,8 @@ flowchart TD
 
     %% Parcours Non Connecté
     TypeUser -- Non --> Gran1{"Granularité"}
-    Gran1 -- Région --> Res1[/Afficher les résultats/]
-    Gran1 -- Département --> Res1
+    Gran1 -- Région --> ChangeFormat
+    Gran1 -- Département --> ChangeFormat
 
     %% Parcours Connecté
     TypeUser -- Oui --> Gran2{"Granularité"}
@@ -25,9 +25,8 @@ flowchart TD
 
     %% Export / Formatage
     ChangeFormat{"Changer le format ?"}
-    ChangeFormat -- Oui --> ChoisirFormat["Choisir le format"] --> Res2[/Afficher les résultats/]
-    ChangeFormat -- Non --> Res2
+    ChangeFormat -- Oui --> ChoisirFormat["Choisir le format"] --> Res1["Afficher les résultats"]
+    ChangeFormat -- Non --> Res1
 
     Res1 --> Fin((Fin))
-    Res2 --> Fin
 ```
