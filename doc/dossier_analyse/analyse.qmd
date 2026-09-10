@@ -20,13 +20,13 @@ format:
 #import "model.typ": project_template
 
 #show: body => project_template(
-  title: [Créer un rapport de projet\ avec Quarto et Typst],
-  team: [Équipe 8],
-  authors: ([Jean-Guy Badiane], [Serena Williams], [François Pignon], [Anne Hathaway]),
+  title: [Projet informatique : dossier d’analyse],
+  team: [Équipe ],
+  authors: ([BAYALA Tatiana], [CHABBERT Jules], [DUTHÉ Ryan], [GIRARD Lucas], [HERMENT Fanny]),
   tutor: [Philippe Lucas],
-  project: [Projet Statistique de 1ère année - Année 2025-2026],
+  project: [Projet Informatique de 2ème année - Année 2026-2027],
   body
-)
+) 
 ```
 
 ## Introduction {.unnumbered}
@@ -37,15 +37,31 @@ format:
 
 {{< pagebreak >}}
 
-## Section 1
+## Contextualisation
 
-### Subsection 1.1
+### Cahier de charges
 
-### Subsection 1.2
+#### Présentation du projet
+
+#### Description des fonctionnalités
+
+### Organisation
+
+#### Role
+
+#### Diagramme de Gantt
 
 {{< pagebreak >}}
 
-## Section 2
+## Modélisation
+
+### Diagramme des cas d'utilisation
+
+### Diagrammes d'activité
+
+### Diagramme de classes
+
+### Diagramme de séquences
 
 {{< pagebreak >}}
 
