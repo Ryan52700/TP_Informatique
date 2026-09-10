@@ -14,51 +14,76 @@ Dossier d'Analyse :  :clock1: <iframe src="https://free.timeanddate.com/countdow
 ---
 
 ```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#E3F2FD',
+      'primaryTextColor': '#0D47A1',
+      'primaryBorderColor': '#1E88E5',
+      'lineColor': '#42A5F5',
+      'secondaryColor': '#E8F5E9',
+      'tertiaryColor': '#FFF3E0',
+      'sectionBkgColor': '#F5F5F5',
+      'altSectionBkgColor': '#FFFFFF',
+      'sectionBkgColor2': '#EEEEEE',
+      'gridColor': '#E0E0E0',
+      'todayLineColor': '#E53935'
+    }
+  }
+}%%
 gantt
-    %% doc : https://mermaid-js.github.io/mermaid/#/./gantt
     dateFormat  YYYY-MM-DD
     axisFormat  %d %b
-    title       Diagramme de Gantt
-    %%excludes  YYYY-MM-DD and/or sunday and/or weekends 
-     
-    section Suivi
-    TP1 et Suivi 1               :milestone, 2023-09-01,
-    TP2 et Suivi 2               :milestone, 2023-09-08,
-    TP3                          :milestone, 2023-09-15,
-    TP4 et Suivi 3               :milestone, 2023-09-29,
-    Suivi 4                      :milestone, 2023-10-13,
-    3j immersion                 :active,    2023-10-25, 3d
-    Suivi 7                      :milestone, 2023-11-17,
-    
-    section Rendu
-    Dossier Analyse              :milestone, 2023-10-07,
-    Rapport + Code               :milestone, 2023-11-25,
-    Soutenance                   :milestone, 2023-12-11,
-    
-    section Vac
-    Toussaint                    :crit,    2023-10-28, 2023-11-05
-    
-    section Analyse
-    analyse sujet                :done,      2023-09-01, 15d
-    modélisation                 :active,    2023-09-08, 15d
-    rédaction                    :active,    2023-09-20, 2023-10-05
-    relecture                    :active,    2023-10-05, 2023-10-07
-    
-    section Code
-    coder une v0                 :active,    2023-09-20, 15d
-    lister classes à coder       :active,    2023-10-07, 7d
-    
+    title       Planning du Projet
 
-    %%Stats univariées retraités   :done,         2021-11-28, 3d
+    section Jalons & Échéances
+    TP1 et Suivi 1                            :milestone, m1, 2026-08-28, 0d
+    TP2 et Suivi 2                            :milestone, m2, 2026-09-04, 0d
+    TP3 et Suivi 3                            :milestone, m3, 2026-09-11, 0d
+    Dossier Analyse                           :milestone, r1, 2026-09-17, 0d
+    TP4                                       :milestone, m4, 2026-09-18, 0d
+    TP5 et Suivi 5                            :milestone, m5, 2026-09-25, 0d
+    Suivi 6                                   :milestone, m6, 2026-11-03, 0d
+    Suivi 7                                   :milestone, m7, 2026-11-05, 0d
+    Rapport + Code                            :milestone, r2, 2026-11-25, 0d
+    Soutenance                                :milestone, r3, 2026-12-09, 0d
+
+    section Événements
+    Vacances de Toussaint                     :crit, vac, 2026-10-26, 2026-10-30
+    3j immersion                              :active, imm, 2026-11-03, 3d
+
+    section Phase d'Analyse
+    Découverte du sujet                       :done, a1, 2026-08-28, 2026-09-04
+    Création du diagramme de classe           :active, a2, 2026-09-04, 2026-09-11
+    Création du diagramme d'activité          :active, a3, 2026-09-04, 2026-09-11
+    Création du diagramme de cas d'utilisation:active, a4, 2026-09-04, 2026-09-11
+    Création du diagramme de séquence         :active, a5, 2026-09-04, 2026-09-11
+    Création du modèle de données             :active, a6, 2026-09-04, 2026-09-11
+    Rédaction du dossier d'analyse            :active, a7, 2026-09-11, 2026-09-17
+
+    section Phase de Développement
+    Création de la base de données            :d1, 2026-09-18, 2026-09-26
+    Création de l'API                         :d2, 2026-09-27, 2026-10-04
+    Fonctionnalité calculerDJU                :d3, 2026-10-04, 2026-10-15
+    Fonctionnalité creerZonage                :d4, 2026-10-04, 2026-10-15
+    Fonctionnalité consulterDJU               :d4, 2026-10-04, 2026-10-15
+    Autres fonctionnalités basiques           :d5, 2026-10-04, 2026-10-15
+    Fonctionnalités connexion                 :d6, 2026-10-16, 2026-10-25
+    Fonctionnalités changerFormat             :d8, 2026-10-16, 2026-10-25
+    Fonctionnalités conserverResultats        :d7, 2026-10-16, 2026-10-25
+    Mise à jour des diagrammes UML            :d9, 2026-10-26, 2026-11-04
+    Rédaction du rapport final                :d10, 2026-11-08, 2026-11-22
+    Préparation de la soutenance              :d11, 2026-11-25, 2026-12-06
 ```
 
 # :calendar: Livrables
 
 | Date    | Livrables                                                    |
 | ------- | ------------------------------------------------------------ |
-| 07 oct. | [Dossier d'Analyse](https://www.overleaf.com/)               |
+| 17 sept. | [Dossier d'Analyse](https://www.overleaf.com/)               |
 | 25 nov. | Rapport final + code (:hammer_and_wrench:  [correcteur orthographe et grammaire](https://www.scribens.fr/))|
-| 12 déc. | Soutenance                                                   |
+| 09 déc. | Soutenance                                                   |
 
 # :construction: Todo List
 
